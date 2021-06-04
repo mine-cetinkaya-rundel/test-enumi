@@ -10,6 +10,13 @@ link-citations: yes
 description: "Testing enumi"
 ---
 
+```{r}
+options(bookdown.post.latex = function(x) {
+  x = gsub("\\\\def\\\\labelenumi\\{\\\\arabic\\{enumi\\}\\.\\}", "", x)
+  x
+})
+```
+
 # Prerequisites
 
 1. hi
